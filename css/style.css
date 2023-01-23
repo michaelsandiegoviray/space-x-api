@@ -1,0 +1,193 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+/*
+
+CSS For Button
+
+
+*/
+
+.btn-21,
+.btn-21 *,
+.btn-21 :after,
+.btn-21 :before,
+.btn-21:after,
+.btn-21:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn-21 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  text-transform: uppercase;
+}
+.btn-21:disabled {
+  cursor: default;
+}
+.btn-21:-moz-focusring {
+  outline: auto;
+}
+.btn-21 svg {
+  display: block;
+  vertical-align: middle;
+}
+.btn-21 [hidden] {
+  display: none;
+}
+.btn-21 {
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
+}
+.btn-21 span {
+  mix-blend-mode: difference;
+}
+.btn-21:before {
+  -webkit-animation: move-out 0.3s;
+  animation: move-out 0.3s;
+  background: #fff;
+  content: "";
+  height: 100%;
+  left: -100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  will-change: transform;
+}
+.btn-21:hover:before {
+  -webkit-animation: move-in 0.3s forwards;
+  animation: move-in 0.3s forwards;
+}
+@-webkit-keyframes move-in {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+@keyframes move-in {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+@-webkit-keyframes move-out {
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(200%);
+  }
+}
+@keyframes move-out {
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(200%);
+  }
+}
+
+#trackerList {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  list-style-type: none;
+}
+
+/*
+
+
+
+/*
+
+Navigation bar
+
+*/
+
+nav {
+  margin: 25px;
+  background: #f9f9f9;
+  padding: 16px;
+}
+nav .menuItems {
+  list-style: none;
+  display: flex;
+}
+nav .menuItems li {
+  margin: 50px;
+}
+nav .menuItems li a {
+  text-decoration: none;
+  color: #8f8f8f;
+  font-size: 24px;
+  font-weight: 400;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+}
+nav .menuItems li a::before {
+  content: attr(data-item);
+  transition: 0.5s;
+  color: red;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  overflow: hidden;
+}
+nav .menuItems li a:hover::before {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+/*
+
+
+
+*/
+
+.footsy {
+  text-align: center;
+  position: relative;
+  bottom: 0;
+}
